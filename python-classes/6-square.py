@@ -38,12 +38,3 @@ class Square:
                 for i in range(0, self.__size):
                     print("#", end="")
                 print()
-
-
-    def check_positive_tuple(value):
-        if not isinstance(value, tuple):
-            return False
-        for i in value:
-            if not isinstance(i, int) or i < 0:
-                return False
-        return True

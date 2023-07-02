@@ -97,7 +97,7 @@ class Rectangle(Base):
         for n in range (self.height):
             print(" " * self.x + "#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
         """
@@ -111,3 +111,6 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        else:
+            for n, e in kwargs.items():
+                setattr(self, n, e)

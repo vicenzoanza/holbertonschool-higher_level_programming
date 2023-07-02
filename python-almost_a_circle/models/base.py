@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ task 1 """
+import json
+
 class Base:
     """
     class base
@@ -21,3 +23,11 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    def to_json_string(list_dictionaries):
+        """
+        returns the JSON string representation of list_dictionaries
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
+        else:
+            return json.dumps(list_dictionaries)

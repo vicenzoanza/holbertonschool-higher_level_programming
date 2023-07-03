@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ task 2 """
-
 from models.base import Base
+
 
 class Rectangle(Base):
     """
     class Rectangle that inherits from Base
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         width = width of rectangle
@@ -79,22 +80,25 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
-        for n in range (self.height):
+        for n in range(self.height):
             print("#" * self.width)
 
     def __str__(self):
         """
-        Update the class Rectangle by overriding the __str__ method so that it returns ...
+        Update the class Rectangle by overriding the __str__ method so that
         """
-        return(f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
-    
+        return (
+            f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+            )
+
     def display(self):
         """
-        print in stdout the Rectangle instance with the character # by taking care of x and y
+        print the Rectangle instance with the character # by taking care of x y
         """
-        for n in range (self.y):
+        for n in range(self.y):
             print("")
-        for n in range (self.height):
+        for n in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     def update(self, *args, **kwargs):
@@ -119,4 +123,8 @@ class Rectangle(Base):
         """
         returns the dictionary representation of a Rectangle
         """
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'width': self.width, 'height': self.height}
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'width': self.width,
+                'height': self.height}

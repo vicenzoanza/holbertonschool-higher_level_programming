@@ -2,7 +2,9 @@
 """ square """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
+
     """
     class Square that inherits from Rectangle
     """
@@ -16,8 +18,11 @@ class Square(Rectangle):
         """
         return [Square] (<id>) <x>/<y> - <size> - in our case, width or height
         """
-        return(f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
-    
+        return(
+            f"[Square] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+            )
+
     @property
     def size(self):
         return self.width

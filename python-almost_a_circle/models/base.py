@@ -2,7 +2,9 @@
 """ task 1 """
 import json
 
+
 class Base:
+
     """
     class base
 
